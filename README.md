@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 💼 Currículo Digital - Portfólio Pessoal
 
-## Getting Started
+Este projeto é uma aplicação web desenvolvida em **Next.js** e **React** com objetivo de apresentar meu **currículo** e **portfólio profissional** de forma interativa, moderna e responsiva.
 
-First, run the development server:
+## 📌 Funcionalidades
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Exibição de **informações pessoais** como nome, e-mail, localização e apresentação.
+- Visualização detalhada das **experiências profissionais** com animações interativas.
+- Lista de **redes sociais** com ícones estilizados.
+- Sessão de **Hard Skills** com tecnologias e frameworks dominados.
+- Página exclusiva de **projetos** com descrição, tecnologias utilizadas e links.
+- Scroll suave entre seções com links no menu.
+- Proteção de endpoints na API via **API Key**.
+- Comunicação com backend (.NET) via **variáveis de ambiente** seguras.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Tecnologias Utilizadas
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Next.js**
+- **React.js**
+- **TypeScript**
+- **TailwindCSS**
+- **React Icons**
+- **FontAwesome**
+- **.NET 8 (para a API)**
+- **Docker** (para deploy containerizado)
+- **Hostiger** para hospedar os containers
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧠 Aprendizados
 
-## Learn More
+- Uso avançado de hooks como `useEffect`, `useState`.
+- Consumo de API segura com headers personalizados.
+- Organização modular de componentes e tipos com `TypeScript`.
+- Deploy com containers Docker (Frontend + Backend).
+- Navegação com `next/link` e ancoragem suave via id.
 
-To learn more about Next.js, take a look at the following resources:
+## ⚙️ Como executar localmente
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Você encontrará o backend em:
+    https://github.com/Denisdev2002/CurriculoDigitalApi

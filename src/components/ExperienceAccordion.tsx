@@ -16,6 +16,10 @@ const formatDate = (date: string) => {
   });
 };
 
+const companyLogos: Record<string, string> = {
+  'Interfocus': '/company/interfocus-logo.png',
+};
+
 type Props = {
   experiences: ExperienceType[];
 };
@@ -41,11 +45,12 @@ const ExperienceAccordion = ({ experiences }: Props) => {
                 className="w-full flex justify-between items-center p-4 bg-neutral-800 hover:bg-neutral-700 focus:outline-none"
               >
                 <div className="flex items-center gap-4">
-                  <img
-                    src={`/${exp.imageCompanyUrl}`}
-                    alt={exp.companyName}
-                    className="w-14 h-14 object-contain rounded"
-                  />
+                <img
+                  src={companyLogos[exp.companyName] || '/company/company-default.png'}
+                  alt={exp.companyName}
+                  className="w-14 h-14 object-contain rounded"
+                />
+
                   <div className="text-left">
                     <p className="text-xl font-bold text-white">{exp.companyName}</p>
                     <p className="text-sm text-lime-300">{exp.jobDescription}</p>

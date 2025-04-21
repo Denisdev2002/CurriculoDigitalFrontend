@@ -8,7 +8,7 @@ import Footer from '../components/Footer';
 import Contato from '../components/Contato';
 import ExperienceAccordion from '../components/ExperienceAccordion';
 import '../types';
-
+import HardSkills from '../components/HardSkills';
 
 type ExperienceType = {
   companyName: string;
@@ -87,6 +87,7 @@ export default function Home() {
         apresentation={personalInfo.apresentation}
       />
         <PersonalInfo info={personalInfo} />
+        <HardSkills /> 
         <ExperienceAccordion experiences={experiences} />
         <SocialMedia
             socials={socials}

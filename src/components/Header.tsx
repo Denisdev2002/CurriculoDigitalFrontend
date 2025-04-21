@@ -9,6 +9,9 @@ const Header = () => {
       </Link>
 
       <nav className="flex gap-6">
+      <Link href="/#hardskills" className="hover:text-white no-underline">
+          Skills
+        </Link>
         <Link href="/#experiencia" className="hover:text-white no-underline">
           Experiência
         </Link>
