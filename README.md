@@ -33,7 +33,5 @@ Este projeto é uma aplicação web desenvolvida em **Next.js** e **React** com 
 - Deploy com containers Docker (Frontend + Backend).
 - Navegação com `next/link` e ancoragem suave via id.
 
-## ⚙️ Como executar localmente
-
-Você encontrará o backend em:
+## 👉 Você encontrará o backend em:
     https://github.com/Denisdev2002/CurriculoDigitalApi
