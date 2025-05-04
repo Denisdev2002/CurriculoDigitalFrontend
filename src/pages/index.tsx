@@ -60,7 +60,6 @@ export default function Home() {
         const socialData = await socialRes.json();
 
         setExperiences(expData);
-        console.log('Dados de experiências:', expData);
         setPersonalInfo(infoData[0]);
         setSocials(socialData);
       } catch (err) {

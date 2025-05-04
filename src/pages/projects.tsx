@@ -1,25 +1,43 @@
-// pages/projects.tsx
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from '../components/Header';
 
-const projects = [
-  {
-    nameProjet: "Currículo Digital",
-    technology: ["C# 9", "React.js", "Next.js", "TypeScript", "Jest"],
-    descriptionProject: "Projeto criado com o intuito de desenvolver e aplicar conhecimentos em React.js e aprender sobre testes de interface utilizando o Jest.",
-    linkProject: "",
-    owner: "yes"
-  },
-  {
-    nameProjet: "Sharebooks",
-    technology: ["C#", "TypeScript", "Angular", "Entity Framework", "Docker"],
-    descriptionProject: "O Sharebook é um aplicativo open source de doação de livros, criado em 2018. Contribuí com a implementação de logs utilizando o Serilog.",
-    linkProject: "https://www.sharebook.com.br/",
-    owner: "no"
-  }
-];
+type ProjectType = {
+  nameProjet: string;
+  technology: string[];
+  descriptionProject: string;
+  linkProject: string;
+  owner: 'yes' | 'no';
+};
 
 const ProjectsPage = () => {
+  const [projects, setProjects] = useState<ProjectType[]>([]);
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        const headers = {
+          'API-KEY': process.env.NEXT_PUBLIC_API_KEY || ''
+        };
+  
+        const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
+        const res = await fetch(`${API_BASE_URL}/api/project`, { headers });
+  
+        if (!res.ok) {
+          throw new Error(`Erro HTTP: ${res.status}`);
+        }
+  
+        const text = await res.text();
+        const data = text ? JSON.parse(text) : [];
+  
+        setProjects(data);
+      } catch (error) {
+        console.error('Erro ao buscar projetos:', error);
+      }
+    };
+  
+    fetchProjects();
+  }, []);  
+
   return (
     <>
       <Header />
