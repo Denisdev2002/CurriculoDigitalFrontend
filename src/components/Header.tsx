@@ -12,6 +12,9 @@ const Header = () => {
       <Link href="/#hardskills" className="hover:text-white no-underline">
           Skills
         </Link>
+        <Link href="/#courses" className="hover:text-white no-underline">
+          Cursos
+        </Link>
         <Link href="/#experiencia" className="hover:text-white no-underline">
           Experiência
         </Link>

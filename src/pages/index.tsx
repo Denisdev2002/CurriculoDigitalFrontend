@@ -9,6 +9,7 @@ import Contato from '../components/Contato';
 import ExperienceAccordion from '../components/ExperienceAccordion';
 import '../types';
 import HardSkills from '../components/HardSkills';
+import AcademicSection from '../components/AcademicSection';
 
 type ExperienceType = {
   companyName: string;
@@ -87,6 +88,7 @@ export default function Home() {
       />
         <PersonalInfo info={personalInfo} />
         <HardSkills /> 
+        <AcademicSection />
         <ExperienceAccordion experiences={experiences} />
         <SocialMedia
             socials={socials}
