@@ -7,6 +7,7 @@ import {
   SiDocker,
   SiLinux,
   SiGit,
+  SiCplusplus,
 } from 'react-icons/si';
 
 const skills = [
@@ -17,20 +18,26 @@ const skills = [
   { name: 'Docker', icon: <SiDocker /> },
   { name: 'Linux (Básico)', icon: <SiLinux /> },
   { name: 'Git', icon: <SiGit /> },
+  {name: 'C++', icon: <SiCplusplus />},
 ];
 
 const HardSkills = () => (
-  <section id="hardskills" className="bg-neutral-800 text-lime-400 px-8 py-12 max-w-3xl mx-auto rounded-md shadow-md mt-10">
-    <h3 className="text-3xl font-header text-center mb-8">Hard Skills</h3>
-    <div className="flex flex-wrap justify-center gap-6">
-      {skills.map((skill, index) => (
-        <div key={index} className="flex flex-col items-center text-center">
-          <div className="text-5xl mb-2">{skill.icon}</div>
-          <span className="text-lg">{skill.name}</span>
-        </div>
-      ))}
+  <section className="relative bg-black text-lime-400 px-8 py-12 max-w-4xl mx-auto rounded-xl border border-lime-500/20 shadow-[0_0_20px_#84cc16] mt-10 backdrop-blur-md">
+  <h3 className="text-3xl font-mono text-center mb-8 tracking-widest">Hard Skills</h3>
+  <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 justify-items-center">
+    {skills.map((skill, index) => (
+  <div
+    key={index}
+    className="flex flex-col items-center text-center p-4 w-32 h-32 border border-lime-500/10 rounded-xl hover:shadow-lime-400 hover:scale-105 transition-transform duration-300"
+  >
+    <div className="text-lime-300 mb-2">
+      <span className="text-5xl">{React.cloneElement(skill.icon, { size: 40 })}</span>
     </div>
-  </section>
+    <span className="text-sm font-mono">{skill.name}</span>
+  </div>
+))}
+  </div>
+</section>
 );
 
 export default HardSkills;

@@ -8,3 +8,12 @@ export type ExperienceType = {
   startDate: string;
   endDate: string | null;
 };
+
+export type CourseType = {
+  curso: string;
+  instituicao: string;
+  dataInicio: string;
+  dataFim: string;
+  descricao: string;
+  status: string;
+};
